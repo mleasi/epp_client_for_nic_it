@@ -3,13 +3,13 @@
 Client Python per la gestione dei domini .it tramite EPP (Extensible Provisioning Protocol) sul registro NIC.it.
 
 ## Funzionalità:
-✅ Login/logout EPP con gestione della sessione via HTTP/SSL
-✅ Recupero delle informazioni di un dominio
-✅ Elenco dei nameserver DNS
-✅ Estrazione dei contatti tecnici
-✅ Cancellazione del dominio (con richiesta di conferma)
-✅ Architettura modulare basata su template XML
-✅ Supporto alle estensioni EPP specifiche di NIC.it
+- ✅ Login/logout EPP con gestione della sessione via HTTP/SSL
+- ✅ Recupero delle informazioni di un dominio
+- ✅ Elenco dei nameserver DNS
+- ✅ Estrazione dei contatti tecnici
+- ✅ Cancellazione del dominio (con richiesta di conferma)
+- ✅ Architettura modulare basata su template XML
+- ✅ Supporto alle estensioni EPP specifiche di NIC.it
 
 ## Requisiti:
 - Python 3.6 o superiore
