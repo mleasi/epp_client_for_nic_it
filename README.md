@@ -61,4 +61,4 @@ python3 main.py yourdomain.it
 
 ## Documentazione
 
-- [NIC.it EPP Technical Guidelines](https://www.nic.it/sites/default/files/documenti/2024/Linee_Guida_Tecniche_Sincrone_v3_1_last.pdf)
+- [NIC.it EPP Linee Guida](https://www.nic.it/sites/default/files/documenti/2024/Linee_Guida_Tecniche_Sincrone_v3_1_last.pdf)
