@@ -1,53 +1,43 @@
-# EPP Client for NIC.it
+# Client EPP per NIC.it
 
-Python client for managing .it domains via EPP (Extensible Provisioning Protocol) on NIC.it registry.
+Client Python per la gestione dei domini .it tramite EPP (Extensible Provisioning Protocol) sul registro NIC.it.
 
-## Features
+## Funzionalità:
+✅ Login/logout EPP con gestione della sessione via HTTP/SSL
+✅ Recupero delle informazioni di un dominio
+✅ Elenco dei nameserver DNS
+✅ Estrazione dei contatti tecnici
+✅ Cancellazione del dominio (con richiesta di conferma)
+✅ Architettura modulare basata su template XML
+✅ Supporto alle estensioni EPP specifiche di NIC.it
 
-- ✅ EPP login/logout with session management via HTTP/SSL
-- ✅ Domain information retrieval
-- ✅ DNS nameserver listing
-- ✅ Technical contacts extraction
-- ✅ Domain deletion (with confirmation)
-- ✅ Modular architecture with XML templates
-- ✅ Support for NIC.it EPP extensions
+## Requisiti:
+- Python 3.6 o superiore
+- Supporto SSL (integrato)
 
-## Requirements
-
-- Python 3.6+
-- SSL support (built-in)
-
-## Installation
-
+## Installazione
 ```bash
-git clone https://github.com/yourusername/epp-client-nic-it
+git clone https://github.com/mleasi/epp-client-nic-it
 cd epp-client-nic-it
 cp config.example.py config.py
 ```
 
-Edit `config.py` with your NIC.it EPP credentials:
+Modifica il file `config.py` inserendo le credenziali EPP di NIC.it:
 
 ```python
 EPP_HOST = 'epp.nic.it'
 EPP_PORT = 443
-EPP_USER = 'YOUR_REGISTRAR_ID'
-EPP_PASSWORD = 'YOUR_PASSWORD'
+EPP_USER = 'TUO_ID_REGISTRAR'
+EPP_PASSWORD = 'TUA_PASSWORD'
 ```
 
-## Usage
+## Utilizzo
 
 ```bash
 python3 main.py yourdomain.it
 ```
 
-The script will:
-1. Login to EPP server
-2. Retrieve domain information
-3. Display nameservers and technical contacts
-4. Ask for confirmation to delete the domain
-5. Logout from EPP server
-
-## Project Structure
+## Struttura del progetto
 
 ```
 ├── main.py              # Main script
@@ -63,20 +53,12 @@ The script will:
     └── delete_domain.xml
 ```
 
-## Adding New EPP Commands
+## Aggiungere nuovi comandi EPP
 
-1. Create XML template in `xml/` folder with placeholders (e.g., `$$DOMAIN$$`)
-2. Add builder function in `epp_builders.py`
-3. Use in `main.py` with `client.send_request()`
+1. Crea un template XML nella cartella `xml/` con i segnaposto (e.g., `$$DOMAIN$$`)
+2. Aggiungi la funzione builder in `epp_builders.py`
+3. Utilizzala in `main.py` tramite `client.send_request()`
 
-## Documentation
+## Documentazione
 
 - [NIC.it EPP Technical Guidelines](https://www.nic.it/sites/default/files/documenti/2024/Linee_Guida_Tecniche_Sincrone_v3_1_last.pdf)
-
-## License
-
-MIT License
-
-## Disclaimer
-
-This is an unofficial client. Use at your own risk. Always test on test domains first.
